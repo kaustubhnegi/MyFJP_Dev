@@ -1,0 +1,9 @@
+let cp = require('child_process');
+// console.log(cp);
+
+// cp.execFileSync("calc");
+//cp.execFileSync("notepad");
+//  cp.execSync('code');
+
+let content = cp.execSync("node test.js");
+console.log("Output of test.js file: "+content);
