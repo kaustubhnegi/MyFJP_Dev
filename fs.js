@@ -1,4 +1,5 @@
  let fs = require("fs");
+ let path = require("path");
 // //console.log(fs);
 
 // let path = require("path");
@@ -32,5 +33,25 @@
 
 if(!fs.existsSync("hamariDirectory"))
     fs.mkdirSync("hamariDirectory");
+
+    let folderPath = __dirname;
+
+    let contentOfFolder = fs.readdirSync(folderPath);
+    console.log(contentOfFolder);
+
+    // delete a directory
+    fs. rmdirSync("hamariDirectory");
+
+    // copy a file
+
+    let sourcePath      = path.join( __dirname,"file.txt");
+    let destinationPath = path.join(__dirname,"module","file.txt");
+
+    console.log(sourcePath);
+    console.log(destinationPath);
+
+    fs.copyFileSync(sourcePath,destinationPath);
+
+    
 
 
