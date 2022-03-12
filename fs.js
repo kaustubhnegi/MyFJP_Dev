@@ -30,7 +30,7 @@
 
 // fs.unlinkSync(filePath
 
-
-fs.mkdirSync("hamariDirectory");
+if(!fs.existsSync("hamariDirectory"))
+    fs.mkdirSync("hamariDirectory");
 
 
